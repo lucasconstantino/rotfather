@@ -1,0 +1,23 @@
+.list {
+
+}
+
+.list__item {
+	display: block;
+	margin-bottom: 44px;
+	overflow: hidden;
+}
+
+.list__image {
+	display: inline-block;
+	margin: 0;
+	float: left;
+	margin-right: 0.5 * $unit;
+}
+
+.list__text {
+	padding: 0;
+	display: block;
+	margin: 0;
+	vertical-align: top;
+}

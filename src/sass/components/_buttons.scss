@@ -1,0 +1,39 @@
+.button {
+	display: inline-block;
+	border: 0;
+	padding: 0.5em 1em;
+}
+
+.button--ghost {
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 0.5em 1.5em;
+	text-transform: uppercase;
+	font-size: pow($font-ratio,2) + em;
+	font-weight: bold;
+	text-shadow: 3px 3px rgba(0, 0, 1, 0.42);
+	box-shadow: 3px 3px rgba(0, 0, 1, 0.42);
+	&:hover {
+		background-color: #650C14;
+		color: white;
+		border-color: #650C14;
+	}
+}
+
+.button-greenlight {
+	@extend .button--ghost;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.icon-next-slide {
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%);
+	color: white;
+	font-size: 3em;
+}

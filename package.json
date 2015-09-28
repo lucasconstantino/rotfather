@@ -1,0 +1,26 @@
+{
+  "name": "Rotfather",
+  "version": "0.0.0",
+  "description": "website for the Rotfather Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "marcosvlehmkuhl"
+  },
+  "author": "Marcos Lehmkuhl",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "gulp-util": "~3.0.6",
+    "gulp": "~3.9.0",
+    "gulp-sass": "~2.0.4",
+    "express": "~4.13.3",
+    "bower": "~1.5.2",
+    "gulp-jade": "~1.1.0",
+    "nodemon": "~1.7.1",
+    "gulp-browserify": "~0.5.1",
+    "jquery": "~2.1.4"
+  }
+}
