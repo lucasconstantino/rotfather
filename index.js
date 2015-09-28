@@ -5,7 +5,7 @@ var fs = require('fs'),
 app.use(express.static('dist'));
 
 app.get('/', function(req, res){
-	res.sendFile(__dirname + '/dist/views/home.html');
+	res.sendFile(__dirname + '/dist/views/index.html');
 });
 
 app.get('/game', function(req, res){
