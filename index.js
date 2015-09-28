@@ -12,8 +12,8 @@ app.get('/game', function(req, res){
 	res.sendFile(__dirname + '/dist/views/game.html');
 });
 
-app.get('/product', function(req, res){
-	res.sendFile(__dirname + '/dist/views/product.html');
+app.get('/products', function(req, res){
+	res.sendFile(__dirname + '/dist/views/products.html');
 });
 
 app.get('/project', function(req, res){

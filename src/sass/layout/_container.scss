@@ -1,17 +1,23 @@
-.bg-1 {
-	background: url('../imgs/bg.jpg');
+.bg-home {
+	background: url('../imgs/bgs/home.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
 }
 
 .bg-rat_city {
-	background: url('../imgs/rat_city.jpg');
+	background: url('../imgs/bgs/rat_city.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
 }
 
 .bg-cabaret {
-	background: url('../imgs/cabaret.jpg');
+	background: url('../imgs/bgs/cabaret.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.bg-game {
+	background: url('../imgs/bgs/game.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
 }
