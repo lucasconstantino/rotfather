@@ -1,2 +1,4 @@
-node_modules
-dist/imgs
+node_modules/
+dist/imgs/
+src/bower_components/
+
