@@ -8,12 +8,14 @@
 	background: url('../imgs/bgs/rat_city.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
+	height: 100%;
 }
 
 .bg-cabaret {
 	background: url('../imgs/bgs/cabaret.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
+	height: 100%;
 }
 
 .bg-game {
@@ -27,6 +29,12 @@
 	width: 100%;
 	position: relative;
 	padding: $unit * 2;
+	overflow: hidden;
+	.vertical-center {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
 .bg-black {
@@ -37,4 +45,9 @@
 .bg-gray {
 	background-color: gray;
 	color: white;
+}
+
+[class*='bg-'] {
+	color: white;
+	padding: 2em;
 }

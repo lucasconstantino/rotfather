@@ -9212,13 +9212,30 @@ return jQuery;
 
 },{}],2:[function(require,module,exports){
 var $ = require('jquery');
-var $slider = require('./slider');
+var slider = require('./slider/ui');
 
 $(function(){
-	$slider($);
+	slider($);
 })
-},{"./slider":3,"jquery":1}],3:[function(require,module,exports){
+
+},{"./slider/ui":3,"jquery":1}],3:[function(require,module,exports){
 module.exports = function($) {
-	// return $('.button').hide();
+	
+	var pageHeight = $('.page-full').height();
+	var navHeight = $('nav').height();
+	var totalHeight = pageHeight + navHeight;
+	var sliderButton = $('.js-slider');
+
+	function slide() {
+		if(window.scrollY > totalHeight) {
+			return;
+		}
+		window.scrollBy(0, 30);
+		window.requestAnimationFrame(slide);
+	}
+
+	sliderButton.on('click', function(){
+		window.requestAnimationFrame(slide);
+	})
 }
 },{}]},{},[2])

@@ -1,67 +1,53 @@
 extends ./layout.jade
 
 block content
-  .page-full.bg-1
-    h1 The Game
-  .page-full.container-fluid.bg-gray
+  .page-full.bg-gray
     .row
-      .col-xs-6
-        h2 Story
+      .col-xs-12
+        h1 PRODUCTS
       .col-xs-6
         p This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s. 
           | During the underworlds prohibition of sugar commercialization he built an empire out of trafficking, 
           | creating a very powerful mafia system. But after the mysterious death of his right-hand man, 
           | he was betrayed, beaten up and left for dead by the hands of a cockroach gang. Now he is back to figure out what 
           | happened and who betrayed him.
-        p He will try to recover his empire, each area at a time, exploring a sewer system that is connected by complex pathways. 
+          | He will try to recover his empire, each area at a time, exploring a sewer system that is connected by complex pathways. 
           | He also has to free his partners who controlled each of the sugar distribution points. Immersed in a sea of intrigue, 
           | where animals and insects live and work both together and against each other, he doesn't know who to trust. 
           | The only thing he knows is where everything begins: in Madam Laura's Cabaret...
-  .page-full.container-fluid.bg-black
-    .row
-      .col-xs-12
-        h2 Characters
-      .col-xs-3
-        .list
-          .list__item
-            .thumbnail.list__image
-              img(src="imgs/Kane.jpg")
-            .list__text 
-              q This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s.  
-          .list__item
-            .thumbnail.list__image
-              img(src="imgs/Madame_Laura.jpg")
-            .list__text 
-              q This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s. 
-      .col-xs-3
-          .list
-            .list__item
-              .thumbnail.list__image
-                img(src="imgs/Madame_Laura.jpg")
-              .list__text 
-                q This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s.
-          .list__item
-            .thumbnail.list__image
-              img(src="imgs/Kane.jpg")
-            .list__text 
-              q This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s. 
-      .col-xs-3
-          .list__item
-            .thumbnail.list__image
-              img(src="imgs/Madame_Laura.jpg")
-            .list__text 
-              q This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s.  
-  .page-full.container-fluid.bg-rat_city
-    h2 Cidade dos Ratos
-    p This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s. 
-      | During the underworlds prohibition of sugar commercialization he built an empire out of trafficking, 
-      | creating a very powerful mafia system. But after the mysterious death of his right-hand man, 
-      | he was betrayed, beaten up and left for dead by the hands of a cockroach gang. Now he is back to figure out what 
-      | happened and who betrayed him.
-  .page-full.container-fluid.bg-cabaret
-    h2 Cabaret
-    p This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s. 
-      | During the underworlds prohibition of sugar commercialization he built an empire out of trafficking, 
-      | creating a very powerful mafia system. But after the mysterious death of his right-hand man, 
-      | he was betrayed, beaten up and left for dead by the hands of a cockroach gang. Now he is back to figure out what 
-      | happened and who betrayed him.
+  .page-full.bg-black
+    .item--huge
+      .item__text
+        h2 Animation
+        p A web série animada 2D se subdvide em 4 temporadas, apresentando em detalhes as histórias do universo 
+          | mafioso de Al Kane, na década de 40, em Nova York.
+      .item__image.item__image
+        .thumbnail.thumbnail--large
+          img(src="imgs/products/animation.jpg")
+  .page-full.bg-black
+    .item--huge
+      .item__text
+        h2 The Board Game
+        p The Rotfather possui 03 jogos de cartas. Um dos jogos aborda o processo de intriga entre os clãs, o outro oferece a
+          | possibilidade de criação de artimanhas relacionadas ao contrabando de objetos, e o terceiro coloca o jogador 
+          | em situações de ostentação.
+      .item__image.item__image--right
+        .thumbnail.thumbnail--large
+          img(src="imgs/products/card_game.jpg")
+  .page-full.bg-black
+    .item--huge
+      .item__text
+        h2 The Comics
+        p Os quadrinhos trazem, de forma independente, a história de cada um dos personagens que habitam os esgotos de Nova York. O primeiro quadrinho apresenta o universo do Sapo Oyabun, que sai de sua terra natal Toquio, após o
+          | assassinato de seu dono, para ir a América estruturar uma célula da mafia japoneza nos rios que se ligam aos esgotos de Kane.
+      .item__image.item__image
+        .thumbnail.thumbnail--large
+          img(src="imgs/products/hq.jpg")
+   .page-full.bg-black
+    .item--huge
+      .item__text
+        h2 Licensed Products
+        p The Rotfather possui vários produtos licenciados, bonecos, canecas, camisetas, bottons, chaveiros, dentre outros em desenvolvimento
+      .item__image.item__image--right
+        .thumbnail.thumbnail--large
+          img(src="imgs/products/mug.jpg")

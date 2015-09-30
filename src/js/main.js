@@ -1,6 +1,6 @@
 var $ = require('jquery');
-var $slider = require('./slider');
+var slider = require('./slider/ui');
 
 $(function(){
-	$slider($);
+	slider($);
 })

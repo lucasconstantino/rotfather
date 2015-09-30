@@ -21,12 +21,7 @@ gulp.task('bundleJS', function(){
 })
 
 gulp.task('template', function(){
-	gulp.src(['./src/views/*.jade', '!./src/views/layout.jade', '!./src/views/index.jade'])
-		.pipe(jade({
-			pretty: true
-		}))
-		.pipe(gulp.dest('./dist/views'));
-	gulp.src('./src/views/index.jade')
+	gulp.src(['./src/views/*.jade', '!./src/views/layout.jade'])
 		.pipe(jade({
 			pretty: true
 		}))

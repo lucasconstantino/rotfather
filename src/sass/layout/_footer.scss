@@ -1,0 +1,27 @@
+footer {
+	padding: $unit;
+	background: url('../imgs/bgs/footer.jpg');
+	width: 100%;
+	height: auto;
+	min-height: 80px;
+	display: block;
+	img {
+		width: auto;
+		height: 80px;
+		margin-right: 2 * $unit;
+	}
+	#footer_link {
+		text-align: center;
+		color: white;
+		margin: 0;
+	}
+	#footer_media {
+		color: white;
+		font-size: 2 * $unit;
+		float: right;
+		.fa {
+			margin-left: $unit;
+			line-height: 75px;
+		}
+	}
+}

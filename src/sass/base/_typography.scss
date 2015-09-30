@@ -1,34 +1,41 @@
 p {
 	font-size: $base-font-size;
-	line-height: 22px;
+	line-height: 1.2em;
 	margin-top:0;
-	margin-bottom: 22px;
+	margin-bottom: 1em;
 }
 
 h4 {
 	font-size: pow($font-ratio,2) + em;    
 	margin: 0;
-  line-height: 22px;
-  margin-bottom: 11px;
+  line-height: 1.2em;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 h3 {
 	font-size: pow($font-ratio,3) + em;
 	margin: 0;
- 	line-height: 44px;
+ 	line-height: 1.2em;
  	margin-bottom: 22px;
 }
 
 h2 {
 	font-size: pow($font-ratio,4) + em;
 	 margin: 0;
-   line-height: 44px;
+   line-height: 1.2em;
    margin-bottom: 22px;
 }
 
 h1 {
 	font-size: pow($font-ratio,5) + em;
 	margin: 0;
-  line-height: 44px;
+  line-height: 1.2em;
   margin-bottom: 44px
+}
+
+h5 {
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 22px;
 }
