@@ -1,7 +1,31 @@
 $unit: 1em;
 $base-font-size: 1em;
-$font-ratio: 1.25;
-$baseline: 22px;
+$font-ratio: 1.5;
+$baseline: $base-font-size * 1.25;
+
+$breakpoints: (
+	'small': 762px,
+	'medium': 992px,
+	'large': 1200px,
+);
+
+$type-scale: (
+	-1: $base-font-size / 1.25,
+	0: $base-font-size,
+	1: $base-font-size * pow($font-ratio, 1),
+	2: $base-font-size * pow($font-ratio, 2),
+	3: $base-font-size * pow($font-ratio, 3),
+	4: $base-font-size * pow($font-ratio, 4),
+);
+
+$line-heights: (
+	-1: $base-font-size/ 1.25,
+	0: $baseline,
+	1: $baseline,
+	2: $baseline,
+	3: $baseline,
+	4: $baseline,
+);
 
 $font-title: 'Futura', 'Trebuchet MS', 'Arial', sans-serif;
 

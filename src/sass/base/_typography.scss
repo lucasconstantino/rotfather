@@ -1,41 +1,36 @@
-p {
-	font-size: $base-font-size;
-	line-height: 1.2em;
-	margin-top:0;
-	margin-bottom: 1em;
-}
-
-h4 {
-	font-size: pow($font-ratio,2) + em;    
-	margin: 0;
-  line-height: 1.2em;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-h3 {
-	font-size: pow($font-ratio,3) + em;
-	margin: 0;
- 	line-height: 1.2em;
- 	margin-bottom: 22px;
-}
-
-h2 {
-	font-size: pow($font-ratio,4) + em;
-	 margin: 0;
-   line-height: 1.2em;
-   margin-bottom: 22px;
+body {
+	color: white;
+	font-size: 16px;
 }
 
 h1 {
-	font-size: pow($font-ratio,5) + em;
-	margin: 0;
-  line-height: 1.2em;
-  margin-bottom: 44px
+	@include type-settings(4);
+	margin-top: $baseline/2;
+	margin-bottom: $baseline;
+	text-transform: uppercase;
+	font-weight: 100;
 }
-
+h2{
+	@include type-settings(3);
+	margin-top: $baseline/2;
+	margin-bottom: $baseline;
+}
+h3{
+	@include type-settings(2);
+	margin-top: $baseline/2;
+	margin-bottom: $baseline;
+}
+h4{
+	@include type-settings(1);
+	margin-top: $baseline/2;
+	margin-bottom: $baseline;
+}
 h5 {
 	font-weight: bold;
-	margin-bottom: 5px;
-	margin-top: 22px;
+	font-size: $base-font-size;
+}
+p {
+	@include type-settings(0);
+	margin-top: $baseline/2;
+	margin-bottom: $baseline;
 }

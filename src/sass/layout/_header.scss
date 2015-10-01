@@ -4,9 +4,8 @@
 	top: 0;
 	background-color: $nav-bg-color;
 	width: 100%;
-	height: $nav-height;
+	height: 4em;
 	font-family: $font-title;
-	font-size: 12px;
 	text-transform: uppercase;
 	z-index: 9999;
 	overflow: hidden;
@@ -39,11 +38,13 @@
 
 .nav__item {
 	display: inline-block;
-	height:60px;
-	line-height:60px;
+	height:4em;
+	line-height:4em;
 	padding: 0 $unit;
+	a {
+		@include type-settings(-1);
+	}
 	&--small {
-		font-size: 12px;
 		text-transform: uppercase;
 	}
 }

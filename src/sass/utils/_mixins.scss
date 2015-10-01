@@ -1,10 +1,16 @@
-@function pow($number, $exp) {
-	$value: 1;
-	@if $exp <= 0 {
-		@return $value;
+@mixin bp($value) {
+	@if $value != null {
+		@media(min-width: map-get($breakpoints, $value)){
+			@content;
+		}
 	}
-	@for $i from 1 through $exp {
-		$value: $value * $number;
+	@else {
+		@warn 'Could not find #{$value} in #{$a}';
 	}
-	@return $value;
+}
+
+
+@mixin type-settings($val: 0) {
+	font-size: map-get($type-scale, $val);
+	line-height: map-get($line-heights, $val);
 }
