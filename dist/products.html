@@ -6,35 +6,22 @@
   </head>
   <body>
     <nav class="nav"><a href="/" class="nav__logo"><img src="imgs/logo.png"></a>
-      <ul class="nav__bar">
+      <div class="button button-responsive js-btn-responsive"></div>
+      <ul class="nav__bar is-closed">
         <li class="nav__item"><a href="/">Home</a></li>
         <li class="nav__item"><a href="game">Game</a></li>
         <li class="nav__item"><a href="project">Project</a></li>
         <li class="nav__item"><a href="products">Products</a></li>
         <li class="nav__item"><a href="contact">Contact</a></li>
-        <li class="nav__item nav__item--small"><a href="#">Pt</a></li>
+        <ul class="nav__bar--media">
+          <li class="nav__item nav__item--small"><a href="#">
+              <div class="fa fa-twitter"></div></a></li>
+          <li class="nav__item nav__item--small"><a href="#">
+              <div class="fa fa-facebook"></div></a></li>
+          <li class="nav__item nav__item--small"><a href="#">en</a></li>
+        </ul>
       </ul>
     </nav>
-    <div class="page-full bg-gray">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>PRODUCTS</h1>
-        </div>
-        <div class="col-xs-6">
-          <p>
-            This is the story of a rat called Al Kane, who lives in New York's sewers in the 40s. 
-            During the underworlds prohibition of sugar commercialization he built an empire out of trafficking, 
-            creating a very powerful mafia system. But after the mysterious death of his right-hand man, 
-            he was betrayed, beaten up and left for dead by the hands of a cockroach gang. Now he is back to figure out what 
-            happened and who betrayed him.
-            He will try to recover his empire, each area at a time, exploring a sewer system that is connected by complex pathways. 
-            He also has to free his partners who controlled each of the sugar distribution points. Immersed in a sea of intrigue, 
-            where animals and insects live and work both together and against each other, he doesn't know who to trust. 
-            The only thing he knows is where everything begins: in Madam Laura's Cabaret...
-          </p>
-        </div>
-      </div>
-    </div>
     <div class="page-full bg-black">
       <div class="item--huge">
         <div class="item__text">
@@ -49,10 +36,55 @@
         </div>
       </div>
     </div>
+    <div class="page-full bg-gray">
+      <div class="item--huge">
+        <div class="item__text">
+          <h2>The Comics</h2>
+          <p>
+            Os quadrinhos trazem, de forma independente, a história de cada um dos personagens que habitam os esgotos de Nova York. O primeiro quadrinho apresenta o universo do Sapo Oyabun, que sai de sua terra natal Toquio, após o
+            assassinato de seu dono, para ir a América estruturar uma célula da mafia japoneza nos rios que se ligam aos esgotos de Kane.
+          </p>
+        </div>
+        <div class="item__image item__image--right">
+          <div class="thumbnail thumbnail--large"><img src="imgs/products/hq.jpg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-full bg-red">
+      <div class="item--huge">
+        <div class="item__text">
+          <h2>Book</h2>
+          <p>
+            O livro policial conta as aventuras de um dos personagens do submundo dos esgotos, o detetive Pistone. O 
+            leitor é convidado a sentir-se como o protagonista que, embora seja policial, é amigo de infância do mafioso Al 
+            Kane e, por este motivo, vive um drama existencial sempre que se depara com crimes em que Kane está 
+            envolvido.
+          </p>
+        </div>
+        <div class="item__image item__image">
+          <div class="thumbnail thumbnail--large"><img src="imgs/products/Livro.jpg"></div>
+        </div>
+      </div>
+    </div>
     <div class="page-full bg-black">
       <div class="item--huge">
         <div class="item__text">
           <h2>The Board Game</h2>
+          <p>
+            O jogo de tabuleiro traz consigo aspectos diferenciados da história
+            mafiosa que permeia o universo dos esgotos na década de 40, en Nova York, colocando o jogador no lugar de algum clã de personagens que
+            habitam o universo dos esgotos, para que lidem com o comércio mafioso de açúcar e demais objetos, e se deparem com a necessidade de criar intrigas e conspirações durante este processo.
+          </p>
+        </div>
+        <div class="item__image item__image--right">
+          <div class="thumbnail thumbnail--large"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-full bg-gray">
+      <div class="item--huge">
+        <div class="item__text">
+          <h2>The Card Game</h2>
           <p>
             The Rotfather possui 03 jogos de cartas. Um dos jogos aborda o processo de intriga entre os clãs, o outro oferece a
             possibilidade de criação de artimanhas relacionadas ao contrabando de objetos, e o terceiro coloca o jogador 
@@ -64,27 +96,13 @@
         </div>
       </div>
     </div>
-    <div class="page-full bg-black">
-      <div class="item--huge">
-        <div class="item__text">
-          <h2>The Comics</h2>
-          <p>
-            Os quadrinhos trazem, de forma independente, a história de cada um dos personagens que habitam os esgotos de Nova York. O primeiro quadrinho apresenta o universo do Sapo Oyabun, que sai de sua terra natal Toquio, após o
-            assassinato de seu dono, para ir a América estruturar uma célula da mafia japoneza nos rios que se ligam aos esgotos de Kane.
-          </p>
-        </div>
-        <div class="item__image item__image">
-          <div class="thumbnail thumbnail--large"><img src="imgs/products/hq.jpg"></div>
-        </div>
-      </div>
-    </div>
-    <div class="page-full bg-black">
+    <div class="page-full bg-red">
       <div class="item--huge">
         <div class="item__text">
           <h2>Licensed Products</h2>
           <p>The Rotfather possui vários produtos licenciados, bonecos, canecas, camisetas, bottons, chaveiros, dentre outros em desenvolvimento</p>
         </div>
-        <div class="item__image item__image--right">
+        <div class="item__image item__image">
           <div class="thumbnail thumbnail--large"><img src="imgs/products/mug.jpg"></div>
         </div>
       </div>
@@ -92,13 +110,7 @@
     <footer>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-4"><img src="imgs/marcas/logo_ufsc.svg"><img src="imgs/marcas/logo_g2e.png"></div>
-          <div class="col-xs-8">
-            <div id="footer_media">
-              <div class="fa fa-twitter"></div>
-              <div class="fa fa-facebook"></div>
-            </div>
-          </div>
+          <div class="col-xs-6 col-sm-4"><img src="imgs/marcas/logo_ufsc.svg"><img src="imgs/marcas/logo_g2e.png"></div>
         </div>
         <div class="row">
           <div class="col-xs-12">

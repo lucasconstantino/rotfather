@@ -6,16 +6,23 @@
   </head>
   <body>
     <nav class="nav"><a href="/" class="nav__logo"><img src="imgs/logo.png"></a>
-      <ul class="nav__bar">
+      <div class="button button-responsive js-btn-responsive"></div>
+      <ul class="nav__bar is-closed">
         <li class="nav__item"><a href="/">Home</a></li>
         <li class="nav__item"><a href="game">Game</a></li>
         <li class="nav__item"><a href="project">Project</a></li>
         <li class="nav__item"><a href="products">Products</a></li>
         <li class="nav__item"><a href="contact">Contact</a></li>
-        <li class="nav__item nav__item--small"><a href="#">Pt</a></li>
+        <ul class="nav__bar--media">
+          <li class="nav__item nav__item--small"><a href="#">
+              <div class="fa fa-twitter"></div></a></li>
+          <li class="nav__item nav__item--small"><a href="#">
+              <div class="fa fa-facebook"></div></a></li>
+          <li class="nav__item nav__item--small"><a href="#">en</a></li>
+        </ul>
       </ul>
     </nav>
-    <div class="bg-black container">
+    <div class="container">
       <div class="row">
         <div class="col-xs-8">
           <h1>WHO WE ARE</h1>
@@ -129,13 +136,7 @@
     <footer>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-4"><img src="imgs/marcas/logo_ufsc.svg"><img src="imgs/marcas/logo_g2e.png"></div>
-          <div class="col-xs-8">
-            <div id="footer_media">
-              <div class="fa fa-twitter"></div>
-              <div class="fa fa-facebook"></div>
-            </div>
-          </div>
+          <div class="col-xs-6 col-sm-4"><img src="imgs/marcas/logo_ufsc.svg"><img src="imgs/marcas/logo_g2e.png"></div>
         </div>
         <div class="row">
           <div class="col-xs-12">

@@ -1,6 +1,8 @@
 var $ = require('jquery');
-var slider = require('./slider/ui');
+var slider = require('./slider');
+var menu = require('./nav');
 
 $(function(){
-	slider($);
+	slider.init();
+	menu.init();
 })

@@ -1,14 +1,20 @@
+// @mixin bp($value) {
+// 	@if $value != null {
+// 		@media(min-width: map-get($breakpoints, $value)){
+// 			@content;
+// 		}
+// 	}
+// 	@else {
+// 		@warn 'Could not find #{$value} in #{$a}';
+// 	}
+// }
+
+
 @mixin bp($value) {
-	@if $value != null {
-		@media(min-width: map-get($breakpoints, $value)){
-			@content;
-		}
-	}
-	@else {
-		@warn 'Could not find #{$value} in #{$a}';
+	@media(min-width: $value) {
+		@content;
 	}
 }
-
 
 @mixin type-settings($val: 0) {
 	font-size: map-get($type-scale, $val);

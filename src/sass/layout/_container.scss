@@ -2,6 +2,7 @@
 	background: url('../imgs/bgs/home.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
+	height: 100%;
 }
 
 .bg-rat_city {
@@ -22,18 +23,21 @@
 	background: url('../imgs/bgs/game.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
+	height: 100%;		
 }
 
 .page-full {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	padding: $unit * 2;
-	overflow: hidden;
-	.vertical-center {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+	@include bp(600px) {	
+		height: 100%;
+		width: 100%;
+		position: relative;
+		padding: $unit * 2;
+		overflow: hidden;
+		.vertical-center {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 }
 
@@ -42,12 +46,22 @@
 }
 
 .bg-black {
-	background-color: black;
+	background-color: $black;
 	color: white;
 }
 
 .bg-gray {
-	background-color: gray;
+	background-color: #20231F;
+	color: white;
+}
+
+.bg-red {
+	background-color: $red;
+	color: white;
+}
+
+.bg-green {
+	background-color: $green;
 	color: white;
 }
 

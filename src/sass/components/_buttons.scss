@@ -15,9 +15,9 @@
 	text-shadow: 3px 3px rgba(0, 0, 1, 0.42);
 	box-shadow: 3px 3px rgba(0, 0, 1, 0.42);
 	&:hover {
-		background-color: #650C14;
+		background-color: $red;
 		color: white;
-		border-color: #650C14;
+		border-color: $dark-red;
 	}
 }
 
@@ -27,6 +27,11 @@
 	top: 70%;
 	left: 50%;
 	transform: translate(-50%);
+	width: 90%;
+	font-size: 22px;
+	@include bp(600px) {
+		width: auto;
+	}
 }
 
 .icon-next-slide {
@@ -36,4 +41,22 @@
 	transform: translate(-50%);
 	color: white;
 	font-size: 3em;
+}
+
+.button-responsive {
+	height: 64px;
+	line-height: 64px;
+	width: 64px;
+	float: right;
+	cursor: pointer;
+	text-align: center;
+	padding: 0;
+	&:after {
+		content:'\f0C9';
+		font-family: "FontAwesome";
+		font-size: 24px;
+	}
+	@include bp(600px) {
+		display: none;
+	}
 }

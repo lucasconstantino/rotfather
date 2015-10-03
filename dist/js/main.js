@@ -9212,30 +9212,65 @@ return jQuery;
 
 },{}],2:[function(require,module,exports){
 var $ = require('jquery');
-var slider = require('./slider/ui');
+var slider = require('./slider');
+var menu = require('./nav');
 
 $(function(){
-	slider($);
+	slider.init();
+	menu.init();
 })
 
-},{"./slider/ui":3,"jquery":1}],3:[function(require,module,exports){
-module.exports = function($) {
-	
-	var pageHeight = $('.page-full').height();
-	var navHeight = $('nav').height();
-	var totalHeight = pageHeight + navHeight;
-	var sliderButton = $('.js-slider');
+},{"./nav":3,"./slider":4,"jquery":1}],3:[function(require,module,exports){
+var $ = require('jquery');
 
-	function slide() {
-		if(window.scrollY > totalHeight) {
-			return;
-		}
-		window.scrollBy(0, 30);
-		window.requestAnimationFrame(slide);
+var $btn = $('.js-btn-responsive');
+var $nav = $('.nav__bar');
+
+function init() {
+	console.log($btn);
+	$btn.on('click', function(){
+		$nav.toggleClass('is-open');
+	})
+} 
+
+module.exports = {
+	init: init
+}
+},{"jquery":1}],4:[function(require,module,exports){
+var $ = require('jquery');
+
+var $bgHome = $('.bg-home');
+var $nav = $('nav');
+var sliderButton = $('.js-slider');
+
+function calc() {
+	var navHeight = $nav.height();
+	var bgHomeHeight = $bgHome.height();
+	var totalHeight = bgHomeHeight + navHeight;
+
+	return totalHeight;
+}
+
+function slide() {
+	var totalHeight = calc();
+
+	if(window.scrollY > totalHeight) {
+		return;
 	}
+	window.scrollBy(0, 30);
+	window.requestAnimationFrame(slide);
+}
 
+function init() {
+	if($bgHome.height() === null) {
+		return;
+	}
 	sliderButton.on('click', function(){
 		window.requestAnimationFrame(slide);
 	})
 }
-},{}]},{},[2])
+
+module.exports = {
+	init: init
+}
+},{"jquery":1}]},{},[2])

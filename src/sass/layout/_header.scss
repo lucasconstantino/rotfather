@@ -11,40 +11,96 @@
 	overflow: hidden;
 }
 .nav__logo {
-	position: absolute;
-	height: $logo-height;
+	display: inline-block;
+	text-align: center;
+	height: 100%;
+	line-height: 64px;
 	width: $logo-width;
-  left: 100px;
-  top: 0;
   z-index: 1000;
   background-color: $nav-bg-color;
-  padding: 1.5em $unit 0.5em $unit;
+  padding: 0 $unit 0 $unit;
 	img {
-		max-height: 100%;
+		width: 50px;
 		max-width: 100%;
 	}
 }
 
 .nav__bar {
-	float: right;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+	position: fixed;
+	right: 0;
+	background-color: $black;
+	width: 10em;
+	text-align: right;
+	height: 100%;
 	a {
 		text-decoration: none;
 		color: white;
+	}		
+	@include bp(600px) {
+		position: static;
+		height: 64px;
+		width: auto;
+		float: right;
+		display: inline-block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+		&.is-closed {
+		right: -10em;
+		transition: all .3s;
+	}
+	&.is-open {
+		transition: all .3s;
+		right: 0;
+	}
+}
+
+.nav__bar--media {
+	@include bp(600px) {
+		padding: 0;
+		margin-left: 60px;
+		display: inline-block;		
 	}
 }
 
 .nav__item {
-	display: inline-block;
-	height:4em;
-	line-height:4em;
-	padding: 0 $unit;
-	a {
-		@include type-settings(-1);
-	}
+	height: 64px;
+	line-height: 64px;
+	padding-right: 1em;
+	&:hover {
+		background-color: $red;
+	}		
 	&--small {
-		text-transform: uppercase;
+		display: inline-block;
+		padding: 0;
+		width: 44px;
+		height: 44px;
+		text-align: center;
+		line-height: 44px;
+		&:last-child {
+			padding-right: 1em;
+			text-align: right;
+		}
+	}
+	@include bp(600px) {
+		padding: 0 $unit;
+		display: inline-block;
+		height:4em;
+		line-height:4em;
+		padding: 0 0.5em;
+		a {
+			@include type-settings(-1);
+		}
+		&--small {
+			padding: 0 0.5em;
+		}
+	}
+	@include bp(880px) {
+		padding: 0 (2 * $unit);
+		display: inline-block;
+		&--small {
+			padding: 0 1em;
+		}
 	}
 }

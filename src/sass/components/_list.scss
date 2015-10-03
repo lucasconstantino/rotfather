@@ -6,6 +6,10 @@ ul {
 	}
 }
 
+q + p {
+	margin-top: 0;
+}
+
 .list {
 
 }
@@ -37,16 +41,27 @@ ul {
 	overflow: hidden;
 	.item__image {
 		display: inline-block;
-		width: 50%;
+		width: 100%;
 		margin: 0;
-		float: left;
-		&--right {
-			float: right;
+		@include bp(900px){
+			display: inline-block;
+			width: 50%;
+			margin: 0;
+			float: left;
+			&--right {
+				float: right;
+			}			
 		}
 	}
 	.item__text {
-		width: 30%;
-		display: inline-block;
-		padding: 0 1em;
+		width: 100%;
+		@include bp(900px){
+			width: 50%;
+			display: inline-block;
+			padding: 0 1em;			
+		}
+		@include bp(1200px) {
+			width: 30%;
+		}
 	}
 }

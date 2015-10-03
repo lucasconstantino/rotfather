@@ -1,13 +1,19 @@
 $unit: 1em;
 $base-font-size: 1em;
-$font-ratio: 1.5;
+$font-ratio: 1.25;
 $baseline: $base-font-size * 1.25;
 
-$breakpoints: (
-	'small': 762px,
-	'medium': 992px,
-	'large': 1200px,
-);
+$red: #330909;
+$dark-red: #1C0505;
+$green: #56400F;
+$dark-green: #0D2306;
+$black: #0C0C0C;
+
+// $breakpoints: (
+// 	'small': 762px,
+// 	'medium': 992px,
+// 	'large': 1200px,
+// );
 
 $type-scale: (
 	-1: $base-font-size / 1.25,
@@ -31,6 +37,6 @@ $font-title: 'Futura', 'Trebuchet MS', 'Arial', sans-serif;
 
 /* NAV */
 $nav-height: 60px;
-$nav-bg-color: black;
+$nav-bg-color: $black;
 $logo-height: 90px;
 $logo-width: $logo-height;
