@@ -1,4 +1,5 @@
 node_modules/
 dist/imgs/
 src/bower_components/
+dist
 
