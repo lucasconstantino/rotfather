@@ -4,32 +4,40 @@
 
 var gulp = require('gulp');
 var jade = require('gulp-jade');
+var rename = require("gulp-rename");
+var requireDir = require('require-dir');
+var browserSync = require('browser-sync');
+
+var pages = {
+	'index': 		'',
+	'game': 		'game',
+	'products': 'products',
+	'project': 	'project'
+}, page;
+
+var languages = requireDir(process.cwd() + '/src/i18n');
+var defaultLanguage = 'pt-br';
 
 gulp.task('html', function() {
-	gulp.src(['./src/views/**/*.jade', '!./src/views/**/layout.jade','!./src/views/**/index.jade', '!./src/views/**/partials/*.jade'])
-		.pipe(jade({
-			pretty: true,,
-			locals:{
-				foo: 'bar'
-			},
-		}))
-		.pipe(gulp.dest('./dist/views'));
+	Object.keys(languages).forEach(function (language) {
+		var root = './dist/' + language + '/';
 
-	gulp.src('./src/en/index.jade')
-		.pipe(jade({
-			pretty: true,
-			locals:{
-				foo: 'bar'
-			},
-		}))
-		.pipe(gulp.dest('./dist'));
+		Object.keys(pages).forEach(function (page) {
+			var stream = gulp.src('./src/views/' + page + '.jade')
+				.pipe(jade({
+					pretty: true,
+					locals: languages[language]
+				}))
+				.pipe(rename('index.html'))
+				.pipe(gulp.dest(root + pages[page]));
 
-	gulp.src('./src/br/index.jade')
-		.pipe(jade({
-			pretty: true,
-			locals:{
-				foo: 'bar'
-			},
-		}))
-		.pipe(gulp.dest('./dist/views/br'));
+			if (language == defaultLanguage) {
+				stream.pipe(gulp.dest('./dist/' + pages[page]));
+			}
+		});
+	});
+
+	setTimeout(function () {
+		browserSync.reload();
+	}, 1000);
 });
