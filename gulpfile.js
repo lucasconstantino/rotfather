@@ -24,13 +24,13 @@ gulp.task('bundleJS', function(){
 gulp.task('template', function(){
 	gulp.src(['./src/views/**/*.jade', '!./src/views/**/layout.jade','!./src/views/**/index.jade', '!./src/views/**/partials/*.jade'])
 		.pipe(jade({
-			pretty: true,,
+			pretty: true,
 			locals:{
 				foo: 'bar'
 			},
 		}))
-		.pipe(gulp.dest('./dist/views'));
-	gulp.src('./src/en/index.jade')
+		.pipe(gulp.dest('./dist'));
+	gulp.src('./src/views/en/index.jade')
 		.pipe(jade({
 			pretty: true,
 			locals:{
@@ -38,14 +38,6 @@ gulp.task('template', function(){
 			},
 		}))
 		.pipe(gulp.dest('./dist'));
-	gulp.src('./src/br/index.jade')
-		.pipe(jade({
-			pretty: true,
-			locals:{
-				foo: 'bar'
-			},
-		}))
-		.pipe(gulp.dest('./dist/views/br'));
 });
 
 gulp.task('sass', function () {
