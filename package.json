@@ -13,17 +13,17 @@
   "author": "Marcos Lehmkuhl",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "bower": "~1.5.2",
-    "express": "~4.13.3",
-    "gulp": "~3.9.0",
+    "bower": "~1.8.8",
+    "express": "~4.16.4",
+    "gulp": "~4.0.0",
     "gulp-browserify": "~0.5.1",
     "gulp-jade": "~1.1.0",
     "gulp-nodemon": "^2.0.4",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "~2.0.4",
+    "gulp-sass": "~4.0.2",
     "gulp-util": "~3.0.6",
-    "jquery": "~2.1.4",
-    "nodemon": "~1.7.1"
+    "jquery": "~3.4.0",
+    "nodemon": "~1.18.11"
   },
   "devDependencies": {
     "browser-sync": "^2.9.8"
