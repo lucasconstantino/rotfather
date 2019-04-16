@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "src/bower_components/bootstrap-sass/package.json"
+      ]
+    }
+  }
+}
